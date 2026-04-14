@@ -1,0 +1,566 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blue Hyena Records LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bh-body">
+  <header class="bh-header">
+    <div class="bh-logo">Blue Hyena Records LLC</div>
+    <nav class="bh-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="artists.html">Artists</a>
+      <a href="music.html">Music</a>
+      <a href="radio.html">Radio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bh-hero">
+      <div class="bh-hero-overlay"></div>
+      <div class="bh-hero-content">
+        <h1>Blue Hyena Records LLC</h1>
+        <p class="bh-tagline">Built for Independent Artists Who Refuse to Be Defined.</p>
+        <div class="bh-hero-buttons">
+          <a href="artists.html" class="bh-btn primary">Meet the Artists</a>
+          <a href="radio.html" class="bh-btn ghost">Listen to the Radio</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bh-section">
+      <h2>About Blue Hyena</h2>
+      <p>
+        Blue Hyena Records LLC is a future-facing home for independent artists, creators, and storytellers
+        who refuse to fit into a box. We blend Country, Southern Soul, R&amp;B, and beyond into a
+        sound that is raw, real, and owned by the artists themselves.
+      </p>
+    </section>
+
+    <section class="bh-section bh-grid">
+      <div class="bh-card">
+        <h3>Independent First</h3>
+        <p>
+          We exist for artists who want control, clarity, and a platform that respects their vision.
+        </p>
+      </div>
+      <div class="bh-card">
+        <h3>Radio + Records</h3>
+        <p>
+          From on-air spins to digital releases, Blue Hyena connects sound, story, and audience.
+        </p>
+      </div>
+      <div class="bh-card">
+        <h3>Built to Evolve</h3>
+        <p>
+          Your sound grows. Your brand grows. The platform grows with you—no templates, no ceilings.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bh-footer">
+    <p>© <span id="year"></span> Blue Hyena Records LLC. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Artists · Blue Hyena Records LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bh-body">
+  <header class="bh-header">
+    <div class="bh-logo">Blue Hyena Records LLC</div>
+    <nav class="bh-nav">
+      <a href="index.html">Home</a>
+      <a href="artists.html" class="active">Artists</a>
+      <a href="music.html">Music</a>
+      <a href="radio.html">Radio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bh-page-hero">
+      <h1>Artists</h1>
+      <p>Independent voices. Original stories. No compromises.</p>
+    </section>
+
+    <section class="bh-section bh-grid">
+      <div class="bh-card">
+        <h3>Artist Name #1</h3>
+        <p>Short bio, style, and what makes this artist different.</p>
+      </div>
+      <div class="bh-card">
+        <h3>Artist Name #2</h3>
+        <p>Short bio, style, and what makes this artist different.</p>
+      </div>
+      <div class="bh-card">
+        <h3>Artist Name #3</h3>
+        <p>Short bio, style, and what makes this artist different.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bh-footer">
+    <p>© <span id="year"></span> Blue Hyena Records LLC. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Music · Blue Hyena Records LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bh-body">
+  <header class="bh-header">
+    <div class="bh-logo">Blue Hyena Records LLC</div>
+    <nav class="bh-nav">
+      <a href="index.html">Home</a>
+      <a href="artists.html">Artists</a>
+      <a href="music.html" class="active">Music</a>
+      <a href="radio.html">Radio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bh-page-hero">
+      <h1>Music</h1>
+      <p>Releases from the Blue Hyena Records roster.</p>
+    </section>
+
+    <section class="bh-section bh-grid">
+      <div class="bh-card">
+        <h3>Release Title #1</h3>
+        <p>Artist · Year</p>
+        <p><em>Embed link or player here (Spotify, YouTube, etc.).</em></p>
+      </div>
+      <div class="bh-card">
+        <h3>Release Title #2</h3>
+        <p>Artist · Year</p>
+        <p><em>Embed link or player here.</em></p>
+      </div>
+      <div class="bh-card">
+        <h3>Release Title #3</h3>
+        <p>Artist · Year</p>
+        <p><em>Embed link or player here.</em></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bh-footer">
+    <p>© <span id="year"></span> Blue Hyena Records LLC. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Radio · Blue Hyena Records LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bh-body">
+  <header class="bh-header">
+    <div class="bh-logo">Blue Hyena Records LLC</div>
+    <nav class="bh-nav">
+      <a href="index.html">Home</a>
+      <a href="artists.html">Artists</a>
+      <a href="music.html">Music</a>
+      <a href="radio.html" class="active">Radio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bh-page-hero">
+      <h1>Radio</h1>
+      <p>Echo Point, Blue Hyena Radio, and more—live and on demand.</p>
+    </section>
+
+    <section class="bh-section bh-grid">
+      <div class="bh-card">
+        <h3>Echo Point Radio</h3>
+        <p>Country &amp; Southern Soul energy.</p>
+        <p><em>Place your stream player or link here.</em></p>
+      </div>
+      <div class="bh-card">
+        <h3>Blue Hyena Radio</h3>
+        <p>Independent artists across genres.</p>
+        <p><em>Place your stream player or link here.</em></p>
+      </div>
+      <div class="bh-card">
+        <h3>Other Stations / Shows</h3>
+        <p>List additional channels, shows, or time slots.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bh-footer">
+    <p>© <span id="year"></span> Blue Hyena Records LLC. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact · Blue Hyena Records LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bh-body">
+  <header class="bh-header">
+    <div class="bh-logo">Blue Hyena Records LLC</div>
+    <nav class="bh-nav">
+      <a href="index.html">Home</a>
+      <a href="artists.html">Artists</a>
+      <a href="music.html">Music</a>
+      <a href="radio.html">Radio</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bh-page-hero">
+      <h1>Contact</h1>
+      <p>Bookings, submissions, collaborations, and media.</p>
+    </section>
+
+    <section class="bh-section bh-contact">
+      <div class="bh-card">
+        <h3>General Contact</h3>
+        <p><strong>Email:</strong> your-email@blue-hyena-records.org</p>
+        <p><strong>Social:</strong> Add your social links here.</p>
+      </div>
+      <div class="bh-card">
+        <h3>Artist Submissions</h3>
+        <p>Share links to your music, EPK, and socials.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bh-footer">
+    <p>© <span id="year"></span> Blue Hyena Records LLC. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+:root {
+  --bh-bg: #05060a;
+  --bh-bg-alt: #0b0d14;
+  --bh-blue: #2aa8ff;
+  --bh-gold: #f6c453;
+  --bh-text: #f5f7ff;
+  --bh-muted: #9aa0b5;
+  --bh-card-bg: rgba(10, 12, 20, 0.9);
+  --bh-border: rgba(255, 255, 255, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.bh-body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #101426 0, #05060a 55%, #000 100%);
+  color: var(--bh-text);
+}
+
+/* Header */
+
+.bh-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, rgba(5, 6, 10, 0.95), rgba(5, 6, 10, 0.85));
+  border-bottom: 1px solid var(--bh-border);
+  backdrop-filter: blur(12px);
+}
+
+.bh-logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--bh-gold);
+}
+
+.bh-nav a {
+  color: var(--bh-muted);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.bh-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--bh-blue), var(--bh-gold));
+  transition: width 0.2s ease-out;
+}
+
+.bh-nav a:hover::after,
+.bh-nav a.active::after {
+  width: 100%;
+}
+
+.bh-nav a.active {
+  color: var(--bh-blue);
+}
+
+/* Hero */
+
+.bh-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem 4rem;
+  overflow: hidden;
+}
+
+.bh-hero::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(42, 168, 255, 0.18), transparent 55%),
+    radial-gradient(circle at 90% 0%, rgba(246, 196, 83, 0.18), transparent 55%),
+    radial-gradient(circle at 50% 100%, rgba(42, 168, 255, 0.12), transparent 60%);
+  opacity: 0.9;
+}
+
+.bh-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to bottom, rgba(5, 6, 10, 0.1), rgba(5, 6, 10, 0.95));
+}
+
+.bh-hero-content {
+  position: relative;
+  max-width: 720px;
+  text-align: center;
+  z-index: 1;
+}
+
+.bh-hero h1 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  margin-bottom: 0.75rem;
+  background: linear-gradient(120deg, var(--bh-blue), var(--bh-gold));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+}
+
+.bh-tagline {
+  font-size: 1rem;
+  color: var(--bh-muted);
+  max-width: 520px;
+  margin: 0 auto 1.75rem;
+}
+
+.bh-hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bh-btn {
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.18s ease-out;
+}
+
+.bh-btn.primary {
+  background: linear-gradient(120deg, var(--bh-blue), var(--bh-gold));
+  color: #05060a;
+  font-weight: 600;
+}
+
+.bh-btn.primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.bh-btn.ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--bh-text);
+}
+
+.bh-btn.ghost:hover {
+  border-color: var(--bh-blue);
+  color: var(--bh-blue);
+}
+
+/* Sections */
+
+.bh-section {
+  padding: 2.5rem 1.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.bh-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--bh-blue);
+}
+
+.bh-section p {
+  color: var(--bh-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Grid + Cards */
+
+.bh-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.bh-card {
+  background: var(--bh-card-bg);
+  border-radius: 1rem;
+  padding: 1.4rem 1.3rem;
+  border: 1px solid var(--bh-border);
+  box-shadow: 0 0 0 1px rgba(42, 168, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.bh-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 0 0, rgba(42, 168, 255, 0.18), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.bh-card:hover::before {
+  opacity: 1;
+}
+
+.bh-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+  color: var(--bh-gold);
+}
+
+.bh-card p {
+  margin: 0.2rem 0;
+}
+
+/* Page hero (inner pages) */
+
+.bh-page-hero {
+  padding: 3rem 1.5rem 1.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.bh-page-hero h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(120deg, var(--bh-blue), var(--bh-gold));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.bh-page-hero p {
+  color: var(--bh-muted);
+  font-size: 0.95rem;
+}
+
+/* Contact */
+
+.bh-contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Footer */
+
+.bh-footer {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--bh-muted);
+  border-top: 1px solid var(--bh-border);
+  background: linear-gradient(to right, rgba(5, 6, 10, 0.95), rgba(5, 6, 10, 0.9));
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .bh-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .bh-nav a {
+    margin-left: 0.6rem;
+  }
+
+  .bh-hero {
+    padding-top: 4rem;
+  }
+}
