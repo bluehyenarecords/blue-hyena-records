@@ -4,535 +4,957 @@
   <meta charset="UTF-8" />
   <title>Blue Hyena Records LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Blue Hyena Records LLC – Independent label, artists, and Blue Hyena Radio."
+  />
+
+  <!-- SIMPLE BUILT-IN STYLES (NO EXTRA FILES NEEDED) -->
   <style>
     :root {
-      --bg: #05060a;
-      --bg-alt: #0b0e18;
-      --primary: #1f7bff;
-      --primary-soft: #123a7a;
-      --accent: #f6c453;
-      --text: #f5f5f7;
-      --muted: #9ca3af;
-      --card: #0f172a;
-      --border: #1f2937;
+      --bg: #050814;
+      --bg-alt: #0b1020;
+      --accent: #3ac7ff;
+      --accent-soft: rgba(58, 199, 255, 0.15);
+      --text: #f5f7ff;
+      --muted: #a9b3d1;
+      --card: #11172b;
+      --border: #222a40;
+      --danger: #ff4f6a;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     body {
-      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #18213f 0, #050814 55%);
       color: var(--text);
       line-height: 1.6;
+      min-height: 100vh;
     }
+
     a {
       color: var(--accent);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    header {
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(90deg, #020617 0%, #020617 40%, #111827 100%);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(12px);
+
+    img {
+      max-width: 100%;
+      display: block;
     }
-    .nav {
+
+    /* LAYOUT */
+
+    header,
+    main,
+    footer {
+      width: 100%;
+    }
+
+    .page-wrap {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0.9rem 1.5rem;
+      padding: 20px 16px 60px;
+    }
+
+    /* TOP BAR */
+
+    .top-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(90deg, #0b1020, #11172b);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     }
-    .nav-left {
+
+    .logo-wrap {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 10px;
     }
+
     .logo-circle {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #60a5fa, #1d4ed8 40%, #020617 100%);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      box-shadow: 0 0 18px rgba(37, 99, 235, 0.7);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #5be0ff, #1b4b7a 55%, #02040a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e9f7ff;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 1px;
     }
-    .brand-title {
+
+    .brand-text-main {
       font-weight: 700;
       letter-spacing: 0.08em;
+      font-size: 14px;
       text-transform: uppercase;
-      font-size: 0.85rem;
-      color: var(--text);
     }
-    .brand-sub {
-      font-size: 0.7rem;
+
+    .brand-text-sub {
+      font-size: 11px;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.16em;
     }
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-    .nav-links a {
-      color: var(--muted);
-    }
-    .nav-links a:hover {
-      color: var(--accent);
-    }
 
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 3.5rem;
-    }
-
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 2.5rem;
-      align-items: center;
-      padding: 2.5rem 2rem;
-      border-radius: 1.5rem;
-      background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.35), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.25), transparent 55%),
-        linear-gradient(135deg, #020617, #020617 40%, #020617 60%, #020617);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      box-shadow:
-        0 0 40px rgba(15, 23, 42, 0.9),
-        0 0 80px rgba(37, 99, 235, 0.35);
-      margin-bottom: 3rem;
-    }
-    .hero-kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.75rem;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-    .hero-title {
-      font-size: clamp(2.2rem, 3vw, 2.8rem);
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 0.9rem;
-    }
-    .hero-title span {
-      color: var(--accent);
-    }
-    .hero-tagline {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 30rem;
-      margin-bottom: 1.6rem;
-    }
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      background: rgba(15, 23, 42, 0.8);
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-bottom: 1.4rem;
-    }
-    .hero-pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
-    }
-    .hero-actions {
+    .top-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-bottom: 1.4rem;
+      gap: 8px;
+      justify-content: flex-end;
     }
-    .btn-primary {
-      padding: 0.75rem 1.4rem;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
+
+    .pill-link {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 11px;
       text-transform: uppercase;
-      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
-      color: white;
-      box-shadow:
-        0 0 18px rgba(59, 130, 246, 0.8),
-        0 0 40px rgba(15, 23, 42, 1);
-    }
-    .btn-primary:hover {
-      filter: brightness(1.08);
-    }
-    .btn-ghost {
-      padding: 0.75rem 1.3rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.9);
+      letter-spacing: 0.12em;
       color: var(--muted);
-      cursor: pointer;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      background: rgba(5, 8, 20, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
-    .btn-ghost:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+
+    .pill-link span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #3ac7ff;
+      box-shadow: 0 0 8px rgba(58, 199, 255, 0.9);
     }
-    .hero-footnote {
-      font-size: 0.75rem;
-      color: var(--muted);
+
+    .pill-link.live span.dot {
+      background: #4dff7a;
+      box-shadow: 0 0 8px rgba(77, 255, 122, 0.9);
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 26px;
+      margin-bottom: 32px;
     }
 
     .hero-card {
-      border-radius: 1.2rem;
-      background: radial-gradient(circle at top, #1f2937, #020617 70%);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 1.4rem 1.3rem 1.5rem;
+      background: radial-gradient(circle at top left, #1b2647 0, #050814 55%);
+      border-radius: var(--radius-lg);
+      padding: 22px 20px 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
     }
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 10% 0, rgba(59, 130, 246, 0.35), transparent 55%),
-        radial-gradient(circle at 90% 100%, rgba(250, 204, 21, 0.25), transparent 55%);
-      opacity: 0.9;
-      pointer-events: none;
-    }
-    .hero-card-inner {
-      position: relative;
-      z-index: 1;
-    }
-    .hero-card-label {
-      font-size: 0.7rem;
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--muted);
-      margin-bottom: 0.6rem;
+      margin-bottom: 10px;
     }
-    .hero-card-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 0.8rem;
-    }
-    .hero-card-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      font-size: 0.7rem;
-      color: var(--muted);
-      margin-bottom: 0.9rem;
-    }
-    .hero-card-tag-dot {
+
+    .hero-tag .dot {
       width: 7px;
       height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 10px rgba(250, 204, 21, 0.9);
+      border-radius: 50%;
+      background: #4dff7a;
+      box-shadow: 0 0 10px rgba(77, 255, 122, 0.9);
     }
-    .hero-card-body {
-      font-size: 0.8rem;
+
+    .hero-title {
+      font-size: 28px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-subtitle {
+      font-size: 13px;
       color: var(--muted);
-      margin-bottom: 1rem;
+      max-width: 420px;
+      margin-bottom: 18px;
     }
-    .hero-card-link {
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      padding: 9px 16px;
+      font-size: 13px;
+      border: none;
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      font-size: 0.8rem;
-      color: var(--accent);
+      gap: 8px;
       text-decoration: none;
-    }
-    .hero-card-link span {
-      font-size: 1rem;
+      white-space: nowrap;
     }
 
-    /* SECTIONS */
-    section {
-      margin-bottom: 3rem;
-    }
-    .section-label {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.75rem;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
-    }
-    .section-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-    }
-    .section-sub {
-      font-size: 0.9rem;
-      color: var(--muted);
-      max-width: 32rem;
-      margin-bottom: 1.4rem;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 1rem;
-      border: 1px solid var(--border);
-      padding: 1.2rem 1.2rem 1.3rem;
-    }
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.7rem;
-    }
-    .card-title {
-      font-size: 0.95rem;
+    .btn-primary {
+      background: linear-gradient(135deg, #3ac7ff, #7b5bff);
+      color: #050814;
       font-weight: 600;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
     }
-    .card-tag {
-      font-size: 0.7rem;
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--muted);
     }
-    .card-body {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 0.8rem;
+
+    .hero-meta span.label {
+      color: var(--accent);
     }
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 0.4rem;
+
+    .hero-visual {
+      position: relative;
+      background: radial-gradient(circle at 20% 0, #3ac7ff 0, #050814 55%);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 18px;
+      overflow: hidden;
     }
-    .pill {
-      font-size: 0.7rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
+
+    .hero-visual-inner {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(145deg, #050814, #11172b);
+      padding: 14px 14px 12px;
+      position: relative;
+    }
+
+    .hero-visual-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 6px;
       color: var(--muted);
     }
 
-    .radio-highlight {
-      border-left: 3px solid var(--accent);
-      padding-left: 0.9rem;
-      margin-bottom: 0.9rem;
+    .hero-visual-main {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
-    .radio-link {
+
+    .hero-visual-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-visual-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      font-size: 0.85rem;
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
-      gap: 1.5rem;
-    }
-    .contact-list {
-      font-size: 0.85rem;
+      gap: 6px;
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
       color: var(--muted);
     }
-    .contact-list p {
-      margin-bottom: 0.4rem;
+
+    .hero-visual-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #4dff7a;
+      box-shadow: 0 0 8px rgba(77, 255, 122, 0.9);
     }
-    .footer {
-      border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
-      margin-top: 1rem;
-      font-size: 0.75rem;
+
+    .hero-visual-fade {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at bottom, rgba(58, 199, 255, 0.16), transparent 60%);
+      pointer-events: none;
+    }
+
+    /* CONTENT SECTIONS */
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .card-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .card-meta {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .card-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.4);
+      color: var(--muted);
+    }
+
+    .tag-accent {
+      border-color: rgba(58, 199, 255, 0.7);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    /* RADIO PLAYER BLOCK */
+
+    .radio-player {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .radio-main {
+      background: radial-gradient(circle at top left, #1b2647 0, #050814 55%);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 14px 14px 16px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .radio-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .radio-title {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .radio-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .radio-status .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4dff7a;
+      box-shadow: 0 0 10px rgba(77, 255, 122, 0.9);
+    }
+
+    .radio-body {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .radio-iframe-wrap {
+      margin-top: 8px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #000;
+    }
+
+    .radio-side {
+      background: var(--bg-alt);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 12px 12px 10px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .radio-side ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 6px;
+    }
+
+    .radio-side li {
+      margin-bottom: 4px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 14px 16px 26px;
+      margin-top: 10px;
+      background: radial-gradient(circle at bottom, #11172b 0, #050814 55%);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 11px;
       color: var(--muted);
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
-      gap: 0.6rem;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    @media (max-width: 900px) {
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 800px) {
       .hero {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 1.8rem 1.4rem;
+        grid-template-columns: 1fr;
       }
-      .hero-card {
-        order: -1;
+
+      .radio-player {
+        grid-template-columns: 1fr;
       }
-      .grid-2 {
-        grid-template-columns: minmax(0, 1fr);
+
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
       }
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
+
+      .hero-title {
+        font-size: 24px;
       }
-      .nav-links {
-        display: none;
+    }
+
+    @media (max-width: 500px) {
+      .page-wrap {
+        padding: 16px 12px 40px;
+      }
+
+      .hero-card,
+      .hero-visual,
+      .card,
+      .radio-main,
+      .radio-side {
+        padding: 12px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="nav-left">
-        <div class="logo-circle"></div>
-        <div>
-          <div class="brand-title">Blue Hyena Records LLC</div>
-          <div class="brand-sub">Independent • Southern • Uncaged</div>
+  <div class="page-wrap">
+    <!-- TOP BAR -->
+    <header>
+      <div class="top-bar">
+        <div class="logo-wrap">
+          <div class="logo-circle">BH</div>
+          <div>
+            <div class="brand-text-main">Blue Hyena Records LLC</div>
+            <div class="brand-text-sub">Independent label • Blue Hyena Radio</div>
+          </div>
+        </div>
+
+        <div class="top-links">
+          <a
+            class="pill-link live"
+            href="https://bluehyenarecords.github.io/blue-hyena-radio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="dot"></span>
+            Listen live
+          </a>
+          <a
+            class="pill-link"
+            href="https://sites.google.com/view/bluehyenarecordsllc/home"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Main site
+          </a>
+          <a
+            class="pill-link"
+            href="mailto:bluehyenarecords@gmail.com"
+          >
+            Contact
+          </a>
         </div>
       </div>
-      <nav class="nav-links">
-        <a href="#artists">Artists</a>
-        <a href="#radio">Radio</a>
-        <a href="#releases">Releases</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
     <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="hero-kicker">Label • Radio • Creative House</div>
-        <h1 class="hero-title">
-          Built for Independent Artists<br />
-          <span>Who Refuse to Be Defined</span>
-        </h1>
-        <p class="hero-tagline">
-          Blue Hyena Records LLC is a home for artists who don’t fit the template—country, southern soul, and everything in between, built for real listeners and real stories.
-        </p>
-        <div class="hero-pill">
-          <span class="hero-pill-dot"></span>
-          24/7 radio • artist‑first releases • southern‑rooted, future‑focused
-        </div>
-        <div class="hero-actions">
-          <a href="https://bluehyenarecords.github.io/blue-hyena-radio" class="btn-primary">
-            Listen to Blue Hyena Radio
-          </a>
-          <a href="#contact" class="btn-ghost">
-            Submit Music / Bookings
-          </a>
-        </div>
-        <div class="hero-footnote">
-          Built and owned by the creatives in the room—not the boardroom.
-        </div>
-      </div>
-
-      <aside class="hero-card">
-        <div class="hero-card-inner">
-          <div class="hero-card-label">Live Now</div>
-          <div class="hero-card-title">Blue Hyena Radio • Tap‑to‑Listen Hub</div>
-          <div class="hero-card-tag">
-            <span class="hero-card-tag-dot"></span>
-            Country • Southern Soul • Indie
+    <main>
+      <section class="hero">
+        <!-- LEFT: TEXT -->
+        <div class="hero-card">
+          <div class="hero-tag">
+            <span class="dot"></span>
+            Blue Hyena Radio • 24/7 stream
           </div>
-          <p class="hero-card-body">
-            A 24/7 station programmed for independent artists, deep cuts, and southern‑leaning sounds that don’t make it to corporate playlists.
+
+          <h1 class="hero-title">Music for the nocturnal & the brave.</h1>
+          <p class="hero-subtitle">
+            Blue Hyena Records LLC is an independent label and home of Blue Hyena
+            Radio—broadcasting genre-bending sounds, deep cuts, and new voices
+            from the underground.
           </p>
-          <a class="hero-card-link" href="https://bluehyenarecords.github.io/blue-hyena-radio" target="_blank" rel="noopener">
-            Open Tap‑to‑Listen Page <span>↗</span>
-          </a>
-        </div>
-      </aside>
-    </section>
 
-    <!-- ARTISTS -->
-    <section id="artists">
-      <div class="section-label">Roster</div>
-      <h2 class="section-title">Artists & Collaborators</h2>
-      <p class="section-sub">
-        A growing roster of independent voices—writers, vocalists, musicians, and producers—who bring southern grit, soul, and storytelling to every record.
-      </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://bluehyenarecords.github.io/blue-hyena-radio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ▶ Listen to Blue Hyena Radio
+            </a>
 
-      <div class="grid-2">
-        <article class="card">
-          <div class="card-header">
-            <div class="card-title">Flagship & Core Artists</div>
-            <div class="card-tag">Primary Roster</div>
+            <a
+              class="btn btn-outline"
+              href="https://sites.google.com/view/bluehyenarecordsllc/artists"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View artists
+            </a>
           </div>
-          <div class="card-body">
-            Use this space to highlight your main artists, in‑house projects, or alter‑egos. You can update names and details anytime directly in
-            <!-- =======================
-      OLORON ARTIST SECTION
-     ======================= -->
 
-<section id="oloron" style="padding: 60px 20px; background: #0d0d0d; color: #e6e6e6;">
-    <h2 style="text-align:center; font-size: 42px; margin-bottom: 20px; color:#00eaff;">
-        OLORON
-    </h2>
+          <div class="hero-meta">
+            <span><span class="label">Label:</span> Blue Hyena Records LLC</span>
+            <span><span class="label">Location:</span> Hot Springs, Arkansas</span>
+            <span><span class="label">Format:</span> Independent • Streaming • Digital</span>
+          </div>
+        </div>
 
-    <!-- Spotify Button -->
-    <div style="text-align:center; margin-bottom: 40px;">
-        <a href="https://open.spotify.com/artist/46iYADzf4RN2dzTt9zr0zh" 
-           target="_blank"
-           style="background:#00eaff; padding:14px 28px; border-radius:6px; 
-                  color:#000; font-weight:bold; text-decoration:none; font-size:18px;">
-            🎧 Listen on Spotify
+        <!-- RIGHT: VISUAL / BLURB -->
+        <aside class="hero-visual">
+          <div class="hero-visual-inner">
+            <div class="hero-visual-title">Now streaming</div>
+            <div class="hero-visual-main">Blue Hyena Radio</div>
+            <div class="hero-visual-sub">
+              Curated sets, label showcases, and late-night soundtracks. Tap in
+              and let it run.
+            </div>
+
+            <div class="hero-visual-badge">
+              <span class="dot"></span>
+              Live stream • 24/7
+            </div>
+          </div>
+          <div class="hero-visual-fade"></div>
+        </aside>
+      </section>
+
+      <!-- LABEL / ABOUT -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">About the label</h2>
+          <p class="section-subtitle">
+            A home for artists who don’t fit neatly into one box.
+          </p>
+        </div>
+
+        <div class="card-row">
+          <article class="card">
+            <div class="card-label">Who we are</div>
+            <h3 class="card-title">Blue Hyena Records LLC</h3>
+            <p class="card-text">
+              Blue Hyena Records is an independent label focused on unique
+              voices, experimental sounds, and artists who live just left of
+              center. We support creative freedom, honest storytelling, and
+              music that feels like it was made at 3 a.m. with the lights low.
+            </p>
+            <div class="card-meta">
+              Independent • Artist-first • Genre-fluid
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">What we do</div>
+            <h3 class="card-title">Releases, radio, and more</h3>
+            <p class="card-text">
+              From digital releases to curated radio shows, Blue Hyena Records
+              is building a space where artists can be heard without compromise.
+              We use Blue Hyena Radio as a living, breathing showcase of the
+              label’s sound and community.
+            </p>
+            <div class="card-meta">
+              Digital releases • Streaming • Curation
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ARTISTS (YOU CAN EDIT THESE NAMES LATER) -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Artists</h2>
+          <p class="section-subtitle">
+            A growing roster of creators under the Blue Hyena banner.
+          </p>
+        </div>
+
+        <div class="card-row">
+          <!-- ARTIST 1 -->
+          <article class="card">
+            <div class="card-label">Artist</div>
+            <h3 class="card-title">OLORON</h3>
+            <p class="card-text">
+              Atmospheric, cinematic, and emotionally heavy. OLORON blends
+              electronic textures with organic instrumentation to create
+              immersive soundscapes that feel like film scores for worlds that
+              don’t exist yet.
+            </p>
+            <div class="card-tag-row">
+              <span class="tag tag-accent">Featured</span>
+              <span class="tag">Cinematic</span>
+              <span class="tag">Electronic</span>
+            </div>
+            <div class="card-meta">
+              Releases via Blue Hyena Records
+            </div>
+          </article>
+
+          <!-- ARTIST 2 (PLACEHOLDER) -->
+          <article class="card">
+            <div class="card-label">Artist</div>
+            <h3 class="card-title">Artist Name Here</h3>
+            <p class="card-text">
+              You can replace this text with another artist on your roster.
+              Think of this as a simple profile: who they are, what they sound
+              like, and why they belong at Blue Hyena.
+            </p>
+            <div class="card-tag-row">
+              <span class="tag">Alternative</span>
+              <span class="tag">Experimental</span>
+            </div>
+            <div class="card-meta">
+              Update this section anytime
+            </div>
+          </article>
+
+          <!-- ARTIST 3 (PLACEHOLDER) -->
+          <article class="card">
+            <div class="card-label">Artist</div>
+            <h3 class="card-title">Another Artist</h3>
+            <p class="card-text">
+              Add as many artists as you like by copying this card and changing
+              the name and description. No advanced coding needed—just edit the
+              words.
+            </p>
+            <div class="card-tag-row">
+              <span class="tag">Indie</span>
+              <span class="tag">Electronic</span>
+            </div>
+            <div class="card-meta">
+              Blue Hyena family
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- RADIO SECTION -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Blue Hyena Radio</h2>
+          <p class="section-subtitle">
+            Your always-on broadcast from the Blue Hyena universe.
+          </p>
+        </div>
+
+        <div class="radio-player">
+          <!-- MAIN RADIO CARD -->
+          <div class="radio-main">
+            <div class="radio-header">
+              <div class="radio-title">Live stream</div>
+              <div class="radio-status">
+                <span class="dot"></span>
+                On air
+              </div>
+            </div>
+
+            <div class="radio-body">
+              Blue Hyena Radio runs 24/7 with label cuts, deep dives, and
+              rotating sets. Tap the player below or open the full radio page
+              in a new tab.
+            </div>
+
+            <!-- SIMPLE IFRAME PLAYER (YOU CAN CHANGE THE SRC IF NEEDED) -->
+            <div class="radio-iframe-wrap">
+              <!--
+                If you have a direct AzuraCast public player URL, you can paste it in the src below.
+                Example: http://134.122.8.135/public/bluehyena
+              -->
+              <iframe
+                src="http://134.122.8.135/public/bluehyena"
+                title="Blue Hyena Radio Player"
+                width="100%"
+                height="220"
+                frameborder="0"
+                allow="autoplay"
+              ></iframe>
+            </div>
+
+            <div style="margin-top: 10px; font-size: 11px; color: var(--muted);">
+              If the player above doesn’t load, you can
+              <a
+                href="http://134.122.8.135/public/bluehyena"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                open the AzuraCast player directly
+              </a>.
+            </div>
+          </div>
+
+          <!-- SIDE INFO -->
+          <aside class="radio-side">
+            <strong>Quick links</strong>
+            <ul>
+              <li>
+                ▶
+                <a
+                  href="https://bluehyenarecords.github.io/blue-hyena-radio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Blue Hyena Radio site
+                </a>
+              </li>
+              <li>
+                🎧
+                <a
+                  href="http://134.122.8.135/public/bluehyena"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  AzuraCast public player
+                </a>
+              </li>
+              <li>
+                🌐
+                <a
+                  href="https://sites.google.com/view/bluehyenarecordsllc/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Blue Hyena Records main site
+                </a>
+              </li>
+            </ul>
+
+            <div style="margin-top: 10px;">
+              Want to update this later? You only need to change the links or
+              text—no complex code.
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CONTACT / INFO -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Contact & info</h2>
+          <p class="section-subtitle">
+            For artists, collaborators, and curious listeners.
+          </p>
+        </div>
+
+        <div class="card-row">
+          <article class="card">
+            <div class="card-label">Contact</div>
+            <h3 class="card-title">Get in touch</h3>
+            <p class="card-text">
+              For demos, collaborations, or questions about Blue Hyena Records
+              and Blue Hyena Radio, reach out via email. Keep it simple—links to
+              your music, a short intro, and what you’re looking for.
+            </p>
+            <div class="card-meta">
+              Email:
+              <a href="mailto:bluehyenarecords@gmail.com">
+                bluehyenarecords@gmail.com
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Tech note</div>
+            <h3 class="card-title">Easy to edit</h3>
+            <p class="card-text">
+              You don’t need to be a coder to tweak this page. To change text,
+              just look for the words you see on the site and replace them. To
+              add another artist, copy one of the artist cards and change the
+              name and description.
+            </p>
+            <div class="card-meta">
+              One file • No extra setup
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        ©
+        <span id="year"></span>
+        Blue Hyena Records LLC. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a
+          href="https://bluehyenarecords.github.io/blue-hyena-radio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Radio
         </a>
+        <a
+          href="https://sites.google.com/view/bluehyenarecordsllc/home"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Label site
+        </a>
+        <a href="mailto:bluehyenarecords@gmail.com">Email</a>
+      </div>
     </div>
+  </footer>
 
-    <!-- Text Cards -->
-    <div style="max-width:900px; margin:0 auto;">
-        <img src="images/oloron-about.png" style="width:100%; margin-bottom:30px; border-radius:8px;">
-        <img src="images/oloron-style.png" style="width:100%; margin-bottom:30px; border-radius:8px;">
-        <img src="images/oloron-audience.png" style="width:100%; margin-bottom:30px; border-radius:8px;">
-        <img src="images/oloron-unique.png" style="width:100%; margin-bottom:30px; border-radius:8px;">
-        <img src="images/oloron-legacy.png" style="width:100%; margin-bottom:30px; border-radius:8px;">
-        <img src="images/oloron-extra1.png" style="width:100%; margin-bottom:30px; border-radius:8px;">
-        <img src="images/oloron-extra2.png" style="width:100%; margin-bottom:30px; border-radius:8px;">
-    </div>
-
-    <!-- Image Gallery -->
-    <h3 style="text-align:center; font-size:32px; margin:50px 0 20px; color:#00eaff;">
-        Photo Gallery
-    </h3>
-
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-        <img src="images/oloron-photo1.png" style="width:300px; border-radius:8px;">
-        <img src="images/oloron-photo2.png" style="width:300px; border-radius:8px;">
-        <img src="images/oloron-photo3.png" style="width:300px; border-radius:8px;">
-        <img src="images/oloron-photo4.png" style="width:300px; border-radius:8px;">
-        <img src="images/oloron-photo5.png" style="width:300px; border-radius:8px;">
-    </div>
-
-    <!-- Video Section -->
-    <h3 style="text-align:center; font-size:32px; margin:50px 0 20px; color:#00eaff;">
-        Featured Video
-    </h3>
-
-    <div style="max-width:900px; margin:0 auto; text-align:center;">
-        <video controls style="width:100%; border-radius:10px;">
-            <source src="images/oloron-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-</section>
-
+  <script>
+    // Automatically show the current year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
